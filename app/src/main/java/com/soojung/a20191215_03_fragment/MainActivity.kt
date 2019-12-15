@@ -2,6 +2,8 @@ package com.soojung.a20191215_03_fragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
 
@@ -15,6 +17,18 @@ class MainActivity : BaseActivity() {
 
 
     override fun setupEvents() {
+
+        firstFragBtn.setOnClickListener{
+
+            firstLayout.visibility = View.VISIBLE
+            secondLayout.visibility = View.GONE
+        }
+
+        secondFragBtn.setOnClickListener {
+
+            firstLayout.visibility = View.GONE
+            secondLayout.visibility = View.VISIBLE
+        }
     }
 
     override fun setValues() {
